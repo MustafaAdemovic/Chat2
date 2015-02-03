@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import com.bitcamp.mustafaademovic.chat.GUI.GuiChat;
+import com.bitcamp.mustafaademovic.chat.GUI.ChatGui;
 
 public class Server {
 
@@ -14,15 +14,14 @@ public class Server {
 		ServerSocket server = new ServerSocket(port);
 
 		while (true) {
-			String str = "Waiting for conection";
+			String str = "waiting for connection";
 			System.out.println(str);
 			Socket client = server.accept();
-			GuiChat gc = new GuiChat(client);
-			new Thread(gc).start();
-					
-
+			ChatGui gui = new ChatGui(client);
+			new Thread(gui).start();
 		}
 	}
+
 	public static void main(String[] args) {
 		try {
 			serverStart();

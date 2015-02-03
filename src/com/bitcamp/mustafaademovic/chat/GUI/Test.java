@@ -1,9 +1,8 @@
 package com.bitcamp.mustafaademovic.chat.GUI;
 
-public class TestguiChat {
-
+public class Test {
 	public static void main(String[] args) {
-		//GuiChat gc = new GuiChat();
-	}
 
+		// ChatGui msn = new ChatGui();
+	}
 }
